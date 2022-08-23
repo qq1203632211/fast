@@ -8,12 +8,6 @@
 <!--title keywords description 请改为自己的-->
 <title>果冻加速</title>
 <meta name="keywords" content="bituplink,导航,网址"/>
-
-
-<!--网站favicon可以没有或者改为自己的-->
-<!--<link rel="shortcut icon" type="image/x-icon" href="/https/www.netptop.com/favicon.png"/>
--->
-<!--CSS 若不需要变动样式不用改-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/css/zui.min.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
 ul {
@@ -171,7 +165,7 @@ header .animated2 .top {
     -moz-transform: translateY(8px) rotateZ(45deg);
    /* Firefox */
     -webkit-transform: translateY(8px) rotateZ(45deg);
- /* Safari 鍜  Chrome */
+ /* Safari 鍜� Chrome */
     -o-transform: translateY(8px) rotateZ(45deg);
    /* Opera */
 }
@@ -202,7 +196,7 @@ header .animated2 .bottom {
     -moz-transition: all 0.4s ease;
  /* Firefox 4 */
     -webkit-transition: all 0.4s ease;
- /* Safari 鍜  Chrome */
+ /* Safari 鍜� Chrome */
     -o-transition: all 0.4s ease;
  /* Opera */
     transform: translateZ(0);
@@ -211,7 +205,7 @@ header .animated2 .bottom {
     -moz-transform: translateZ(0);
    /* Firefox */
     -webkit-transform: translateZ(0);
- /* Safari 鍜  Chrome */
+ /* Safari 鍜� Chrome */
     -o-transform: translateZ(0);
    /* Opera */
 }
@@ -297,7 +291,7 @@ header .animated2 .bottom {
 .search-box {
     height: 50px;
     box-shadow: 0px 0px 2px 0px #ccc;
-    border-radius: 80px;
+    border-radius: 10px;
     overflow: hidden;
     display: -webkit-flex;
  /* Safari */
@@ -306,7 +300,7 @@ header .animated2 .bottom {
     border: 1px solid #e6e6e6
 }
 .search-engine-name {
-    width: 80px;
+    width: 69px;
     height: 50px;
     background: #16C0F8;
     border: none;
@@ -724,6 +718,8 @@ input::-webkit-input-placeholder {
         <span>果冻加速</span>
     </h1>
     <!--顶部导航条-->
+    <nav class="nav">
+    </nav>
     <!--便携设备右上角菜单-->
     <button class="nav-btn visible-xs visible-sm"><span class="icon-line top"></span><span class="icon-line middle"></span><span class="icon-line bottom"></span>
     </button>
@@ -739,8 +735,8 @@ input::-webkit-input-placeholder {
             <div class="search">
                 <div class="search-box">
                     <button class="search-engine-name" id="search-engine-name">果冻加速</button>
-                    <input type="text" id="txt" class="search-input" placeholder="请输入需要加速的网址 如：github.com 按Enter跳转"/>
-                    <button class="search-btn" id="search-btn">搜索</button>
+                    <input type="text" id="txt" class="search-input" placeholder="请输入需要加速的网址 如：github.com 按Enter跳转加速"/>
+                    <button class="search-btn" id="search-btn">加速</button>
                 </div>
                 <!-- 搜索引擎 -->
                 <div class="search-engine">
@@ -762,12 +758,12 @@ input::-webkit-input-placeholder {
                     <!--获取内容列表-->
                     <div class="clearfix two-list-box">
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="https://fast.6e.ink/https/github.com" class="card-link" target="_blank">
+                            <a href="https://github.com" class="card-link" target="_blank">
                             <div class="card-tit">GitHub官网</div>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="https://fast.6e.ink/https/duckduckgo.com/" class="card-link" target="_blank">
+                            <a href="https://duckduckgo.com/" class="card-link" target="_blank">
                             <div class="card-tit">DuckDuckGo官网</div>
                             </a>
                         </div>
@@ -777,16 +773,16 @@ input::-webkit-input-placeholder {
             </section>
             <!--页脚-->
             <footer class="footer">
-            <div class="container">
-                <div class="rwo">
-                    <div class="col-md-12">
-                        <p>
-                           使用条款： 使用请遵守当地的法律法规，禁止滥用，滥用造成的后果由使用人本人承担，继续使用则代表同意本条款
-                        </p>
+                <div class="container">
+                    <div class="rwo">
+                        <div class="col-md-12">
+                            <p>
+                               使用条款： 使用请遵守当地的法律法规，禁止滥用，滥用造成的后果由使用人本人承担，继续使用则代表同意本条款
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </footer>
+                </footer>
         </div>
         <!--内容区域-->
     </div>
@@ -836,7 +832,7 @@ function browserRedirect() {
   });
 
 // 默认搜索引擎的内容，如果界面修改了需要同步修改
-var thisSearch = 'https://fast.6e.ink:443/https/';
+var thisSearch = 'https://';
 
 $('#txt').keydown(function(ev){
     // 回车键的处理
@@ -850,10 +846,20 @@ $(function(){
   // 搜索引擎列表，样式一行五个内容，自动换行
   var search = {
     data: [
-    {
-      name: '果冻加速',
-      url: 'https://fast.6e.ink:443/https/'
-    }]
+ //    {
+  //     name: 'duckduckgo搜索',
+  //     url: 'https://duckduckgo.com/?q='
+  //   }, {
+   //    name: 'Bing搜索',
+   //    url: 'https://bing.com/search?q='
+   //  }, {
+   //    name: 'Google搜索',
+   //    url: 'https://www.google.com/search?q='
+   //  }, {
+   //    name: 'GitHub搜索',
+    //   url: 'https://github.com/search?q='
+   //  }
+        ]
   }
   for(var i = 0; i < search.data.length; i++){
     var addList = '<li>' + search.data[i].name + '</li>'
